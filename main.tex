@@ -1,0 +1,64 @@
+% !TEX root = main.tex
+%% 这是主文件，请以此文件为主开始编排论文格式。
+%% 此模板由重庆邮电大学教务处监制。
+%% 编者：教务处，李茜，等；计算机学院，卢星宇，刘媛媛，等。
+%% 特别感谢2022届先进制造工程学院，张治勇对初版Latex模板的大量贡献。
+%% 此版由《吃胡萝卜的兔酱》进行完善，有问题可以@我。
+%% 若有任何格式错误问题或者对Latex模板的改进建议，请联系编者，欢迎各位老师同学一起完善重邮Latex模。
+%% 编译指令： xelatex -> bibtex -> xelatex -> xelatex
+%% overleaf： 菜单 -> 编辑器 -> xelatex 
+
+\documentclass[UTF8,twoside,zihao=-4,AutoFakeBold,scheme=chinese,openany]{ctexbook}
+% 输入配置文件，例如调用的宏包（公式，插图等）
+\input{latex_settings/custom-chinese}
+
+% 设置编译文件，写作中间过程使用可减小编译时间
+% \includeonly{chapters/pagetitle-chinese}
+
+\begin{document}
+\pagestyle{empty}
+% 中文封面页
+\input{chapters/pagetitle-chinese}
+% 原创性声明
+\input{chapters/original}
+%% 使用授权书
+%%\input{chapters/authorization}
+%% 中文摘要页,开始以罗马字母计页码
+\frontmatter
+\pagestyle{content}
+\input{chapters/abs-chinese}
+%% 英文摘要页
+\input{chapters/abs-english}
+
+%% 目录
+\pagestyle{headings}
+\tableofcontents
+% % \thispagestyle{MyStyle}
+\let\cleardoublepage\clearpage %latex消除空白页
+% 符号及缩略词说明
+% \thispagestyle{empty}
+% \input{chapters/sym-def}
+%
+% ===============================
+% 开始章节写作,显示特定页眉页脚
+\mainmatter
+\pagestyle{plain}
+% 第1-7章
+\include{chapters/1-introduction}
+\include{chapters/2-introduction}
+\include{chapters/3-introduction}
+\include{chapters/4-introduction}
+\include{chapters/5-introduction}
+\include{chapters/6-introduction}
+\include{chapters/7-introduction}
+\backmatter
+%================================
+% 参考文献
+\input{chapters/ref}
+% 致谢
+\include{chapters/thanks}
+% 附录
+\include{chapters/appden01}
+\include{chapters/appden02}
+%================================
+\end{document}
