@@ -26,6 +26,7 @@
 latex_settings：设置工程中所需要的格式，即 Latex 中的引言区的设置。页眉页脚字号等的代码全部在latex_setting/custom-chinese.tex文件中，一般不需要进行改动，只需要做一些章节文字的填充，就能生成带格式的论文。
 
 论文填写，要填写的论文章节都在 chapters 文件夹下。
+
 ❖ 填写中文封面页；chapters/pagetitle-chinese.tex
 
 ❖ 填写原创性声明页；chapters/original.tex
